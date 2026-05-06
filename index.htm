@@ -1,0 +1,1375 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@DengXian";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-SG style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;en&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;title&gt;The Human Element: Next-Gen PMO
+Advisory&lt;/title&gt;</p>
+
+<p class=MsoNormal>&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;script
+src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;style&gt;</p>
+
+<p class=MsoNormal>body {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; font-family: 'Inter', system-ui,
+-apple-system, sans-serif;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; background-color: #f1f5f9;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; color: #0f172a;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.chart-container {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; position: relative;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; width: 100%;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; max-width: 800px;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; margin-left: auto;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; margin-right: auto;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; height: 350px;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; max-height: 400px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>@media (max-width: 640px) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; .chart-container {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; height: 280px;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.unicode-icon {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; font-size: 2.5rem;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; line-height: 1;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; display: inline-block;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.gradient-text {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; background: linear-gradient(to right, #2563eb,
+#06b6d4);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; -webkit-background-clip: text;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; -webkit-text-fill-color: transparent;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.glass-card {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; background: rgba(255, 255, 255, 0.95);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; backdrop-filter: blur(10px);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.2);</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.ai-output {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; min-height: 100px;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; white-space: pre-wrap;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>@keyframes pulse-soft {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 0%, 100% { opacity: 1; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 50% { opacity: 0.7; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>.loading-pulse {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; animation: pulse-soft 2s cubic-bezier(0.4, 0,
+0.6, 1) infinite;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body class=&quot;antialiased pb-20&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;header class=&quot;bg-slate-900 text-white pt-20 pb-24
+px-6 relative overflow-hidden&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;div class=&quot;absolute inset-0
+opacity-20 pointer-events-none&quot; style=&quot;background-image:
+radial-gradient(circle at 20px 20px, #3b82f6 2px, transparent 0);
+background-size: 40px 40px;&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;div class=&quot;max-w-6xl mx-auto relative
+z-10 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;bg-blue-600
+text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-full
+mb-4 inline-block&quot;&gt;2026 Strategic Insight&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class=&quot;text-4xl
+md:text-6xl font-extrabold mb-6 leading-tight&quot;&gt;The &lt;span
+class=&quot;gradient-text&quot;&gt;People-First&lt;/span&gt; PMO
+Advisor&lt;/h1&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-xl
+md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8&quot;&gt;As automation
+handles the routine, the PMO mandate has evolved. Today's advisory services are
+driven by power skills: empathy, conflict resolution, and change
+management.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&lt;/header&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;main class=&quot;max-w-6xl mx-auto px-6 -mt-12 relative
+z-20&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;section class=&quot;mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;glass-card
+rounded-2xl shadow-xl p-8 md:p-10 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;text-2xl
+md:text-3xl font-bold mb-4 text-slate-800&quot;&gt;The Human Element
+Paradigm&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-lg text-slate-600 max-w-4xl mx-auto&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Recent 2025-2026 industry analyses indicate a definitive shift in project
+management. With generative AI automating scheduling, risk logging, and status
+reporting, the true differentiator for successful project delivery lies in
+human dynamics. A PMO Advisory service must pivot from transactional oversight
+to transformational leadership.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;!-- AI SECTION --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;section class=&quot;mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl
+shadow-2xl p-8 md:p-10 border border-blue-700/50&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex
+flex-col md:flex-row md:items-center justify-between mb-8 gap-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;h2 class=&quot;text-2xl md:text-3xl font-bold text-white mb-2
+flex items-center gap-3&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; <span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>
+PMO Advisory AI Assistant</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p class=&quot;text-blue-200&quot;&gt;Leverage Gemini to
+navigate complex human dynamics in your projects.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;flex gap-2&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;button onclick=&quot;switchAITool('sentiment')&quot;
+id=&quot;btn-sentiment&quot; class=&quot;px-4 py-2 rounded-lg bg-blue-600
+text-white font-medium hover:bg-blue-500 transition-colors&quot;&gt;Sentiment
+Analysis&lt;/button&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;button onclick=&quot;switchAITool('coach')&quot;
+id=&quot;btn-coach&quot; class=&quot;px-4 py-2 rounded-lg bg-slate-800
+text-blue-300 font-medium hover:bg-slate-700
+transition-colors&quot;&gt;Conflict Coach&lt;/button&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+id=&quot;ai-tool-container&quot; class=&quot;grid grid-cols-1 lg:grid-cols-2
+gap-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;!-- Tool Input --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;space-y-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div id=&quot;sentiment-input-area&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;block text-blue-100 text-sm
+font-semibold mb-2&quot;&gt;Stakeholder Communication Analysis&lt;/label&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea id=&quot;ai-input&quot; class=&quot;w-full
+h-40 bg-slate-800/50 border border-blue-500/30 rounded-xl p-4 text-white
+placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+placeholder=&quot;Paste an email, meeting transcript, or status update here to
+analyze for hidden risks...&quot;&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;button onclick=&quot;runAITool()&quot;
+id=&quot;run-ai-btn&quot; class=&quot;w-full bg-blue-500 hover:bg-blue-400
+text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all flex
+items-center justify-center gap-2&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;<span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>
+Analyze Human Dynamics&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/button&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;!-- Tool Output --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;bg-slate-900/50 border border-blue-500/20 rounded-xl p-6
+relative min-h-[250px]&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div id=&quot;ai-loading&quot; class=&quot;hidden absolute
+inset-0 flex flex-col items-center justify-center bg-slate-900/40 rounded-xl
+backdrop-blur-sm z-10&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-12 h-12 border-4
+border-blue-500 border-t-transparent rounded-full animate-spin
+mb-4&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-blue-200 font-medium
+loading-pulse&quot;&gt;Consulting Gemini...&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div id=&quot;ai-result-placeholder&quot; class=&quot;h-full
+flex flex-col items-center justify-center text-center text-slate-500
+space-y-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;text-4xl
+opacity-20&quot;&gt;&amp;#129302;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Results will appear here after
+processing.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div id=&quot;ai-result&quot; class=&quot;hidden text-blue-50
+text-sm leading-relaxed ai-output&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div id=&quot;ai-error&quot; class=&quot;hidden text-red-400
+p-4 border border-red-900/50 bg-red-900/10 rounded-lg&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;div class=&quot;grid grid-cols-1
+md:grid-cols-2 gap-8 mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;section
+class=&quot;glass-card rounded-2xl shadow-lg p-6 flex flex-col justify-center
+items-center text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center
+mb-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;span class=&quot;unicode-icon
+text-blue-600&quot;&gt;&amp;#129309;&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3
+class=&quot;text-5xl font-extrabold text-slate-900 mb-2&quot;&gt;82&lt;span
+class=&quot;text-3xl text-blue-600&quot;&gt;%&lt;/span&gt;&lt;/h3&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-lg font-medium text-slate-700 mb-4&quot;&gt;of C-Suite
+Executives&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-slate-500&quot;&gt;Report
+that power skills like empathy and conflict resolution are now more critical
+than hard technical skills for PMO success (Data: 2025 Global PMO
+Survey).&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;section
+class=&quot;glass-card rounded-2xl shadow-lg p-6 flex flex-col justify-center
+items-center text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;w-20 h-20 rounded-full bg-emerald-100 flex items-center
+justify-center mb-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;span class=&quot;unicode-icon
+text-emerald-600&quot;&gt;&amp;#128200;&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3
+class=&quot;text-5xl font-extrabold text-slate-900 mb-2&quot;&gt;3.4&lt;span
+class=&quot;text-3xl text-emerald-600&quot;&gt;x&lt;/span&gt;&lt;/h3&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-lg font-medium text-slate-700 mb-4&quot;&gt;Higher
+ROI&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-slate-500&quot;&gt;Projects
+guided by &quot;People-First&quot; PMO Advisors achieve significantly higher
+ROI due to superior change adoption and reduced team burnout.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;section class=&quot;glass-card rounded-2xl
+shadow-lg p-8 mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;mb-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2
+class=&quot;text-3xl font-bold text-slate-800 mb-3&quot;&gt;Focus Area 5: The
+Rise of Power Skills&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-slate-600 text-lg&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The
+technical capabilities that once defined the PMO are now baseline expectations.
+The focus has undeniably shifted. We are seeing a rapid reallocation of
+advisory focus toward human-centric interventions. Empathy drives engagement,
+conflict resolution clears roadblocks, and change management ensures
+sustainable adoption.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;bg-slate-50
+rounded-xl p-4 border border-slate-100&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3
+class=&quot;text-center text-lg font-semibold text-slate-700
+mb-4&quot;&gt;Skill Focus Allocation: 2023 vs 2026&lt;/h3&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;chart-container&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;canvas id=&quot;skillsBarChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-sm text-center text-slate-500 mt-4&quot;&gt;Visualizing the
+definitive shift from traditional task management to advanced interpersonal
+power skills.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;div class=&quot;grid grid-cols-1
+lg:grid-cols-2 gap-8 mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;section class=&quot;glass-card
+rounded-2xl shadow-lg p-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2
+class=&quot;text-2xl font-bold text-slate-800 mb-3&quot;&gt;Focus Area 7:
+People-First Leadership Profile&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-slate-600 mb-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A
+PMO Advisor is no longer just a governance enforcer. They are required to be
+coaches, mediators, and emotional intelligence champions. This radar profile
+maps the critical competencies of top-tier PMO Advisors currently leading
+enterprise transformations.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;chart-container&quot; style=&quot;height: 300px;&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;canvas id=&quot;competencyRadarChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;section
+class=&quot;glass-card rounded-2xl shadow-lg p-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;text-2xl
+font-bold text-slate-800 mb-3&quot;&gt;The Cost of Ignoring the Human
+Element&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-slate-600 mb-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Analyzing project failure data from 2024 to early 2026 reveals that technical
+shortfalls are rarely the root cause. Organizational friction and poor
+stakeholder alignment drive the majority of project distress, highlighting the
+urgent need for PMO advisory.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;chart-container&quot; style=&quot;height: 300px;&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;canvas id=&quot;failureDoughnutChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;section class=&quot;glass-card rounded-2xl
+shadow-lg p-8 mb-16&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-8
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;text-3xl
+font-bold text-slate-800 mb-3&quot;&gt;Measurable Impact of PMO
+Advisory&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;text-slate-600 text-lg max-w-3xl mx-auto&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Tracking key performance metrics across organizations that implemented
+human-centric PMO advisory services between 2023 and 2026 shows a clear, upward
+trajectory in both project success and team well-being.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;chart-container&quot; style=&quot;max-width: 1000px; height:
+400px;&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;canvas
+id=&quot;impactLineChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;grid
+grid-cols-1 md:grid-cols-3 gap-4 mt-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;bg-blue-50 p-4 rounded-lg border border-blue-100
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;span class=&quot;unicode-icon text-blue-500
+mb-2&quot;&gt;&amp;#128161;&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h4 class=&quot;font-bold text-slate-800&quot;&gt;Accelerated
+Adoption&lt;/h4&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm text-slate-600&quot;&gt;Proactive change management
+reduces resistance by 45%.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;bg-emerald-50 p-4 rounded-lg border border-emerald-100
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;span class=&quot;unicode-icon text-emerald-500
+mb-2&quot;&gt;&amp;#127919;&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h4 class=&quot;font-bold text-slate-800&quot;&gt;Conflict
+Mitigation&lt;/h4&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm text-slate-600&quot;&gt;Early intervention saves an
+average of 120 project hours.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;bg-amber-50 p-4 rounded-lg border border-amber-100
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;span class=&quot;unicode-icon text-amber-500
+mb-2&quot;&gt;&amp;#128104;&amp;#8205;&amp;#129309;&amp;#8205;&amp;#128105;&lt;/span&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h4 class=&quot;font-bold text-slate-800&quot;&gt;Team Retention&lt;/h4&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm text-slate-600&quot;&gt;Empathetic leadership
+increases core team retention by 30%.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;/main&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;footer class=&quot;bg-slate-900 text-slate-400 py-8
+text-center text-sm border-t border-slate-800&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;div class=&quot;max-w-6xl mx-auto
+px-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p
+class=&quot;mb-2&quot;&gt;Generated for Strategic PMO Advisory Planning (Data
+reflects 2023-2026 industry trends).&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-xs
+text-slate-500&quot;&gt;Technical Note: This interactive visualization utilizes
+Canvas rendering exclusively. No SVG graphics or Mermaid JS workflows are
+employed in this document.&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&lt;/footer&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;script&gt;</p>
+
+<p class=MsoNormal>// --- CORE UTILITIES ---</p>
+
+<p class=MsoNormal>const formatLabel = (label) =&gt; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; if (label.length &lt;= 16) return label;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const words = label.split(' ');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; let lines = [];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; let currentLine = '';</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; for (let word of words) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; if ((currentLine + word).length
+&gt; 16) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (currentLine)
+lines.push(currentLine.trim());</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentLine = word
++ ' ';</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; } else {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentLine +=
+word + ' ';</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; if (currentLine)
+lines.push(currentLine.trim());</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; return lines;</p>
+
+<p class=MsoNormal>};</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>const commonTooltipOptions = {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; callbacks: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; title: function(tooltipItems) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const item =
+tooltipItems[0];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let label =
+item.chart.data.labels[item.dataIndex];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if
+(Array.isArray(label)) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+return label.join(' ');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+return label;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>};</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>// --- GEMINI API INTEGRATION ---</p>
+
+<p class=MsoNormal>const apiKey = &quot;&quot;;</p>
+
+<p class=MsoNormal>let currentAITool = 'sentiment';</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>function switchAITool(tool) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; currentAITool = tool;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const btnS = document.getElementById('btn-sentiment');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const btnC =
+document.getElementById('btn-coach');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const input =
+document.getElementById('ai-input');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const runBtn =
+document.getElementById('run-ai-btn');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; if (tool === 'sentiment') {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; btnS.className = &quot;px-4 py-2
+rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500
+transition-colors&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; btnC.className = &quot;px-4 py-2
+rounded-lg bg-slate-800 text-blue-300 font-medium hover:bg-slate-700
+transition-colors&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; input.placeholder = &quot;Paste
+an email, meeting transcript, or status update here to analyze for hidden
+risks...&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; runBtn.innerHTML = &quot;&lt;span&gt;<span
+style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span> Analyze Human
+Dynamics&lt;/span&gt;&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; } else {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; btnC.className = &quot;px-4 py-2
+rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500
+transition-colors&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; btnS.className = &quot;px-4 py-2
+rounded-lg bg-slate-800 text-blue-300 font-medium hover:bg-slate-700
+transition-colors&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; input.placeholder =
+&quot;Describe a project conflict, resistance to change, or a difficult
+stakeholder situation...&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; runBtn.innerHTML =
+&quot;&lt;span&gt;<span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>
+Generate Strategy&lt;/span&gt;&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>async function callGemini(prompt, systemInstruction) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const url =
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const payload = {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; contents: [{ parts: [{ text:
+prompt }] }],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; systemInstruction: { parts: [{
+text: systemInstruction }] }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; };</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; for (let i = 0; i &lt; 5; i++) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; try {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const response =
+await fetch(url, {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+method: 'POST',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+headers: { 'Content-Type': 'application/json' },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+body: JSON.stringify(payload)</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!response.ok)
+throw new Error('API Error');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const data = await
+response.json();</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return
+data.candidates?.[0]?.content?.parts?.[0]?.text || &quot;No response
+generated.&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; } catch (error) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i === 4) throw
+error;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; await new
+Promise(r =&gt; setTimeout(r, Math.pow(2, i) * 1000));</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>async function runAITool() {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const input = document.getElementById('ai-input').value.trim();</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; if (!input) return;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const loading =
+document.getElementById('ai-loading');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const placeholder =
+document.getElementById('ai-result-placeholder');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const result = document.getElementById('ai-result');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; const errorBox =
+document.getElementById('ai-error');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; loading.classList.remove('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; placeholder.classList.add('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; result.classList.add('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; errorBox.classList.add('hidden');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; let systemPrompt = &quot;&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; if (currentAITool === 'sentiment') {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; systemPrompt = &quot;You are a
+Next-Gen PMO Advisor expert. Analyze the provided stakeholder communication for
+'The Human Element'. Identify: 1. Emotional Tone. 2. Hidden Risks (burnout,
+resistance, empathy gaps). 3. A suggested 'People-First' response. Keep it
+concise and professional.&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; } else {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; systemPrompt = &quot;You are a
+PMO Conflict Coach. Based on the conflict described, provide a step-by-step
+'Power Skill' resolution strategy. Focus on Empathy, Active Listening, and
+Change Management. Provide a template for a mediation conversation.&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; try {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; const response = await
+callGemini(input, systemPrompt);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; result.textContent = response;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; result.classList.remove('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; } catch (err) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; errorBox.textContent =
+&quot;Unable to connect to the AI service. Please check your connection and try
+again.&quot;;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp;
+errorBox.classList.remove('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; } finally {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; loading.classList.add('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>// --- CHARTS INITIALIZATION ---</p>
+
+<p class=MsoNormal>const barLabels = [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Schedule &amp; Gantt Management',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Budget Tracking &amp; Reporting',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Advanced Empathy &amp; Listening',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Complex Conflict Resolution',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Strategic Change Management'</p>
+
+<p class=MsoNormal>].map(formatLabel);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>new Chart(document.getElementById('skillsBarChart'), {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; type: 'bar',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; data: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; labels: barLabels,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; datasets: [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+label: '2023 Focus Allocation (%)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+data: [35, 30, 10, 10, 15],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+backgroundColor: '#cbd5e1',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderRadius: 4</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+label: '2026 Focus Allocation (%)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+data: [15, 10, 25, 20, 30],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backgroundColor:
+'#3b82f6',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderRadius: 4</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; ]</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; options: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; responsive: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; plugins: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tooltip:
+commonTooltipOptions,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend: {
+position: 'top' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; scales: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+beginAtZero: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max:
+40,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+title: { display: true, text: 'Percentage of Advisory Effort' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>const radarLabels = [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Empathy &amp; Emotional Intel',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Conflict Mediation',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Change Orchestration',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Stakeholder Alignment',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Active Listening',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Technical Governance'</p>
+
+<p class=MsoNormal>].map(formatLabel);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>new Chart(document.getElementById('competencyRadarChart'), {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; type: 'radar',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; data: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; labels: radarLabels,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; datasets: [{</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label:
+'Traditional PMO',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: [40, 50, 60,
+70, 50, 95],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backgroundColor: 'rgba(203,
+213, 225, 0.2)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borderColor:
+'#94a3b8',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+pointBackgroundColor: '#94a3b8',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }, {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label:
+'People-First PMO Advisor',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: [90, 85, 95,
+90, 85, 60],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backgroundColor:
+'rgba(16, 185, 129, 0.2)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borderColor:
+'#10b981',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+pointBackgroundColor: '#10b981',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }]</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; options: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; responsive: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; plugins: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tooltip: commonTooltipOptions,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend: {
+position: 'bottom' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; scales: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min:
+0,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max:
+100,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ticks: { display: false }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>const doughnutLabels = [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Unresolved Stakeholder Conflict',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Change Resistance &amp; Burnout',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Poor Communication',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 'Technical or Budget Failure'</p>
+
+<p class=MsoNormal>].map(formatLabel);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>new Chart(document.getElementById('failureDoughnutChart'), {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; type: 'doughnut',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; data: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; labels: doughnutLabels,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; datasets: [{</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: [40, 35, 15,
+10],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backgroundColor: [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+'#f97316',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+'#f59e0b',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+'#3b82f6',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+'#cbd5e1'</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borderWidth: 0</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }]</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; options: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; responsive: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; cutout: '65%',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; plugins: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tooltip:
+commonTooltipOptions,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend: {
+position: 'right' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>const lineLabels = ['Q1 2024', 'Q3 2024', 'Q1 2025', 'Q3
+2025', 'Q1 2026', 'Q3 2026'].map(formatLabel);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>new Chart(document.getElementById('impactLineChart'), {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; type: 'line',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; data: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; labels: lineLabels,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; datasets: [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+label: 'Project Success Rate (%)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+data: [65, 68, 74, 81, 86, 89],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderColor: '#2563eb',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+backgroundColor: 'rgba(37, 99, 235, 0.1)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borderWidth:
+3,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+tension: 0.4,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+fill: true</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+label: 'Project Team Retention (%)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+data: [72, 75, 78, 85, 90, 94],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderColor: '#10b981',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+backgroundColor: 'transparent',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderWidth: 3,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+borderDash: [5, 5],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+tension: 0.4</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; ]</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; options: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; responsive: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; plugins: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tooltip:
+commonTooltipOptions,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend: {
+position: 'top' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; scales: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+beginAtZero: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min:
+50,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max:
+100,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+title: { display: true, text: 'Metric Percentage' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
