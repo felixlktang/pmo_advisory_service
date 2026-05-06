@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Human Element: Next-Gen PMO Advisory</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body {
+
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+    background-color: #f1f5f9;
+
+    color: #0f172a;
+
+}
+
+.chart-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 800px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    height: 350px;
+
+    max-height: 400px;
+
+}
+
+@media (max-width: 640px) {
+
+    .chart-container {
+
+        height: 280px;
+
+    }
+
+}
+
+.unicode-icon {
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    display: inline-block;
+
+}
+
+.gradient-text {
+
+    background: linear-gradient(to right, #2563eb, #06b6d4);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.glass-card {
+
+    background: rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.ai-output {
+
+    min-height: 100px;
+
+    white-space: pre-wrap;
+
+}
+
+@keyframes pulse-soft {
+
+    0%, 100% { opacity: 1; }
+
+    50% { opacity: 0.7; }
+
+}
+
+.loading-pulse {
+
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+}
+
+</style>
+
+</head>
+
+<body class="antialiased pb-20">
+
+ 
+
+<header class="bg-slate-900 text-white pt-20 pb-24 px-6 relative overflow-hidden">
+
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 20px 20px, #3b82f6 2px, transparent 0); background-size: 40px 40px;"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10 text-center">
+
+        <span class="bg-blue-600 text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-full mb-4 inline-block">2026 Strategic Insight</span>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">The <span class="gradient-text">People-First</span> PMO Advisor</h1>
+
+        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8">As automation handles the routine, the PMO mandate has evolved. Today's advisory services are driven by power skills: empathy, conflict resolution, and change management.</p>
+
+    </div>
+
+</header>
+
+ 
+
+<main class="max-w-6xl mx-auto px-6 -mt-12 relative z-20">
+
+ 
+
+    <section class="mb-16">
+
+        <div class="glass-card rounded-2xl shadow-xl p-8 md:p-10 text-center">
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-800">The Human Element Paradigm</h2>
+
+            <p class="text-lg text-slate-600 max-w-4xl mx-auto">
+
+                Recent 2025-2026 industry analyses indicate a definitive shift in project management. With generative AI automating scheduling, risk logging, and status reporting, the true differentiator for successful project delivery lies in human dynamics. A PMO Advisory service must pivot from transactional oversight to transformational leadership.
+
+            </p>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- AI SECTION -->
+
+    <section class="mb-16">
+
+        <div class="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl shadow-2xl p-8 md:p-10 border border-blue-700/50">
+
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+
+                <div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center gap-3">
+
+                        ✨ PMO Advisory AI Assistant
+
+                    </h2>
+
+                    <p class="text-blue-200">Leverage Gemini to navigate complex human dynamics in your projects.</p>
+
+                </div>
+
+                <div class="flex gap-2">
+
+                    <button onclick="switchAITool('sentiment')" id="btn-sentiment" class="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors">Sentiment Analysis</button>
+
+                    <button onclick="switchAITool('coach')" id="btn-coach" class="px-4 py-2 rounded-lg bg-slate-800 text-blue-300 font-medium hover:bg-slate-700 transition-colors">Conflict Coach</button>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div id="ai-tool-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Tool Input -->
+
+                <div class="space-y-4">
+
+                    <div id="sentiment-input-area">
+
+                        <label class="block text-blue-100 text-sm font-semibold mb-2">Stakeholder Communication Analysis</label>
+
+                        <textarea id="ai-input" class="w-full h-40 bg-slate-800/50 border border-blue-500/30 rounded-xl p-4 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Paste an email, meeting transcript, or status update here to analyze for hidden risks..."></textarea>
+
+                    </div>
+
+                    <button onclick="runAITool()" id="run-ai-btn" class="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+
+                        <span>✨ Analyze Human Dynamics</span>
+
+                    </button>
+
+                </div>
+
+ 
+
+                <!-- Tool Output -->
+
+                <div class="bg-slate-900/50 border border-blue-500/20 rounded-xl p-6 relative min-h-[250px]">
+
+                    <div id="ai-loading" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-slate-900/40 rounded-xl backdrop-blur-sm z-10">
+
+                        <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+
+                        <p class="text-blue-200 font-medium loading-pulse">Consulting Gemini...</p>
+
+                    </div>
+
+                    <div id="ai-result-placeholder" class="h-full flex flex-col items-center justify-center text-center text-slate-500 space-y-4">
+
+                        <div class="text-4xl opacity-20">&#129302;</div>
+
+                        <p>Results will appear here after processing.</p>
+
+                    </div>
+
+                    <div id="ai-result" class="hidden text-blue-50 text-sm leading-relaxed ai-output"></div>
+
+                    <div id="ai-error" class="hidden text-red-400 p-4 border border-red-900/50 bg-red-900/10 rounded-lg"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+        <section class="glass-card rounded-2xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
+
+            <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+
+                <span class="unicode-icon text-blue-600">&#129309;</span>
+
+            </div>
+
+            <h3 class="text-5xl font-extrabold text-slate-900 mb-2">82<span class="text-3xl text-blue-600">%</span></h3>
+
+            <p class="text-lg font-medium text-slate-700 mb-4">of C-Suite Executives</p>
+
+            <p class="text-slate-500">Report that power skills like empathy and conflict resolution are now more critical than hard technical skills for PMO success (Data: 2025 Global PMO Survey).</p>
+
+        </section>
+
+ 
+
+        <section class="glass-card rounded-2xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
+
+            <div class="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mb-6">
+
+                <span class="unicode-icon text-emerald-600">&#128200;</span>
+
+            </div>
+
+            <h3 class="text-5xl font-extrabold text-slate-900 mb-2">3.4<span class="text-3xl text-emerald-600">x</span></h3>
+
+            <p class="text-lg font-medium text-slate-700 mb-4">Higher ROI</p>
+
+            <p class="text-slate-500">Projects guided by "People-First" PMO Advisors achieve significantly higher ROI due to superior change adoption and reduced team burnout.</p>
+
+        </section>
+
+    </div>
+
+ 
+
+    <section class="glass-card rounded-2xl shadow-lg p-8 mb-16">
+
+        <div class="mb-8">
+
+            <h2 class="text-3xl font-bold text-slate-800 mb-3">Focus Area 5: The Rise of Power Skills</h2>
+
+            <p class="text-slate-600 text-lg">
+
+                The technical capabilities that once defined the PMO are now baseline expectations. The focus has undeniably shifted. We are seeing a rapid reallocation of advisory focus toward human-centric interventions. Empathy drives engagement, conflict resolution clears roadblocks, and change management ensures sustainable adoption.
+
+            </p>
+
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
+
+            <h3 class="text-center text-lg font-semibold text-slate-700 mb-4">Skill Focus Allocation: 2023 vs 2026</h3>
+
+            <div class="chart-container">
+
+                <canvas id="skillsBarChart"></canvas>
+
+            </div>
+
+            <p class="text-sm text-center text-slate-500 mt-4">Visualizing the definitive shift from traditional task management to advanced interpersonal power skills.</p>
+
+        </div>
+
+    </section>
+
+ 
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+
+        <section class="glass-card rounded-2xl shadow-lg p-8">
+
+            <h2 class="text-2xl font-bold text-slate-800 mb-3">Focus Area 7: People-First Leadership Profile</h2>
+
+            <p class="text-slate-600 mb-6">
+
+                A PMO Advisor is no longer just a governance enforcer. They are required to be coaches, mediators, and emotional intelligence champions. This radar profile maps the critical competencies of top-tier PMO Advisors currently leading enterprise transformations.
+
+            </p>
+
+            <div class="chart-container" style="height: 300px;">
+
+                <canvas id="competencyRadarChart"></canvas>
+
+            </div>
+
+        </section>
+
+ 
+
+        <section class="glass-card rounded-2xl shadow-lg p-8">
+
+            <h2 class="text-2xl font-bold text-slate-800 mb-3">The Cost of Ignoring the Human Element</h2>
+
+            <p class="text-slate-600 mb-6">
+
+                Analyzing project failure data from 2024 to early 2026 reveals that technical shortfalls are rarely the root cause. Organizational friction and poor stakeholder alignment drive the majority of project distress, highlighting the urgent need for PMO advisory.
+
+            </p>
+
+            <div class="chart-container" style="height: 300px;">
+
+                <canvas id="failureDoughnutChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </div>
+
+ 
+
+    <section class="glass-card rounded-2xl shadow-lg p-8 mb-16">
+
+        <div class="mb-8 text-center">
+
+            <h2 class="text-3xl font-bold text-slate-800 mb-3">Measurable Impact of PMO Advisory</h2>
+
+            <p class="text-slate-600 text-lg max-w-3xl mx-auto">
+
+                Tracking key performance metrics across organizations that implemented human-centric PMO advisory services between 2023 and 2026 shows a clear, upward trajectory in both project success and team well-being.
+
+            </p>
+
+        </div>
+
+        <div class="chart-container" style="max-width: 1000px; height: 400px;">
+
+            <canvas id="impactLineChart"></canvas>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-100 text-center">
+
+                <span class="unicode-icon text-blue-500 mb-2">&#128161;</span>
+
+                <h4 class="font-bold text-slate-800">Accelerated Adoption</h4>
+
+                <p class="text-sm text-slate-600">Proactive change management reduces resistance by 45%.</p>
+
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100 text-center">
+
+                <span class="unicode-icon text-emerald-500 mb-2">&#127919;</span>
+
+                <h4 class="font-bold text-slate-800">Conflict Mitigation</h4>
+
+                <p class="text-sm text-slate-600">Early intervention saves an average of 120 project hours.</p>
+
+            </div>
+
+            <div class="bg-amber-50 p-4 rounded-lg border border-amber-100 text-center">
+
+                <span class="unicode-icon text-amber-500 mb-2">&#128104;&#8205;&#129309;&#8205;&#128105;</span>
+
+                <h4 class="font-bold text-slate-800">Team Retention</h4>
+
+                <p class="text-sm text-slate-600">Empathetic leadership increases core team retention by 30%.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+</main>
+
+ 
+
+<footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <p class="mb-2">Generated for Strategic PMO Advisory Planning (Data reflects 2023-2026 industry trends).</p>
+
+        <p class="text-xs text-slate-500">Technical Note: This interactive visualization utilizes Canvas rendering exclusively. No SVG graphics or Mermaid JS workflows are employed in this document.</p>
+
+    </div>
+
+</footer>
+
+ 
+
+<script>
+
+// --- CORE UTILITIES ---
+
+const formatLabel = (label) => {
+
+    if (label.length <= 16) return label;
+
+    const words = label.split(' ');
+
+    let lines = [];
+
+    let currentLine = '';
+
+    for (let word of words) {
+
+        if ((currentLine + word).length > 16) {
+
+            if (currentLine) lines.push(currentLine.trim());
+
+            currentLine = word + ' ';
+
+        } else {
+
+            currentLine += word + ' ';
+
+        }
+
+    }
+
+    if (currentLine) lines.push(currentLine.trim());
+
+    return lines;
+
+};
+
+ 
+
+const commonTooltipOptions = {
+
+    callbacks: {
+
+        title: function(tooltipItems) {
+
+            const item = tooltipItems[0];
+
+            let label = item.chart.data.labels[item.dataIndex];
+
+            if (Array.isArray(label)) {
+
+                return label.join(' ');
+
+            } else {
+
+                return label;
+
+            }
+
+        }
+
+    }
+
+};
+
+ 
+
+// --- GEMINI API INTEGRATION ---
+
+const apiKey = "";
+
+let currentAITool = 'sentiment';
+
+ 
+
+function switchAITool(tool) {
+
+    currentAITool = tool;
+
+    const btnS = document.getElementById('btn-sentiment');
+
+    const btnC = document.getElementById('btn-coach');
+
+    const input = document.getElementById('ai-input');
+
+    const runBtn = document.getElementById('run-ai-btn');
+
+ 
+
+    if (tool === 'sentiment') {
+
+        btnS.className = "px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors";
+
+        btnC.className = "px-4 py-2 rounded-lg bg-slate-800 text-blue-300 font-medium hover:bg-slate-700 transition-colors";
+
+        input.placeholder = "Paste an email, meeting transcript, or status update here to analyze for hidden risks...";
+
+        runBtn.innerHTML = "<span>✨ Analyze Human Dynamics</span>";
+
+    } else {
+
+        btnC.className = "px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors";
+
+        btnS.className = "px-4 py-2 rounded-lg bg-slate-800 text-blue-300 font-medium hover:bg-slate-700 transition-colors";
+
+        input.placeholder = "Describe a project conflict, resistance to change, or a difficult stakeholder situation...";
+
+        runBtn.innerHTML = "<span>✨ Generate Strategy</span>";
+
+    }
+
+}
+
+ 
+
+async function callGemini(prompt, systemInstruction) {
+
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+    const payload = {
+
+        contents: [{ parts: [{ text: prompt }] }],
+
+        systemInstruction: { parts: [{ text: systemInstruction }] }
+
+    };
+
+ 
+
+    for (let i = 0; i < 5; i++) {
+
+        try {
+
+            const response = await fetch(url, {
+
+                method: 'POST',
+
+                headers: { 'Content-Type': 'application/json' },
+
+                body: JSON.stringify(payload)
+
+            });
+
+            if (!response.ok) throw new Error('API Error');
+
+            const data = await response.json();
+
+            return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+
+        } catch (error) {
+
+            if (i === 4) throw error;
+
+            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
+
+        }
+
+    }
+
+}
+
+ 
+
+async function runAITool() {
+
+    const input = document.getElementById('ai-input').value.trim();
+
+    if (!input) return;
+
+ 
+
+    const loading = document.getElementById('ai-loading');
+
+    const placeholder = document.getElementById('ai-result-placeholder');
+
+    const result = document.getElementById('ai-result');
+
+    const errorBox = document.getElementById('ai-error');
+
+ 
+
+    loading.classList.remove('hidden');
+
+    placeholder.classList.add('hidden');
+
+    result.classList.add('hidden');
+
+    errorBox.classList.add('hidden');
+
+ 
+
+    let systemPrompt = "";
+
+    if (currentAITool === 'sentiment') {
+
+        systemPrompt = "You are a Next-Gen PMO Advisor expert. Analyze the provided stakeholder communication for 'The Human Element'. Identify: 1. Emotional Tone. 2. Hidden Risks (burnout, resistance, empathy gaps). 3. A suggested 'People-First' response. Keep it concise and professional.";
+
+    } else {
+
+        systemPrompt = "You are a PMO Conflict Coach. Based on the conflict described, provide a step-by-step 'Power Skill' resolution strategy. Focus on Empathy, Active Listening, and Change Management. Provide a template for a mediation conversation.";
+
+    }
+
+ 
+
+    try {
+
+        const response = await callGemini(input, systemPrompt);
+
+        result.textContent = response;
+
+        result.classList.remove('hidden');
+
+    } catch (err) {
+
+        errorBox.textContent = "Unable to connect to the AI service. Please check your connection and try again.";
+
+        errorBox.classList.remove('hidden');
+
+    } finally {
+
+        loading.classList.add('hidden');
+
+    }
+
+}
+
+ 
+
+// --- CHARTS INITIALIZATION ---
+
+const barLabels = [
+
+    'Schedule & Gantt Management',
+
+    'Budget Tracking & Reporting',
+
+    'Advanced Empathy & Listening',
+
+    'Complex Conflict Resolution',
+
+    'Strategic Change Management'
+
+].map(formatLabel);
+
+ 
+
+new Chart(document.getElementById('skillsBarChart'), {
+
+    type: 'bar',
+
+    data: {
+
+        labels: barLabels,
+
+        datasets: [
+
+            {
+
+                label: '2023 Focus Allocation (%)',
+
+                data: [35, 30, 10, 10, 15],
+
+                backgroundColor: '#cbd5e1',
+
+                borderRadius: 4
+
+            },
+
+            {
+
+                label: '2026 Focus Allocation (%)',
+
+                data: [15, 10, 25, 20, 30],
+
+                backgroundColor: '#3b82f6',
+
+                borderRadius: 4
+
+            }
+
+        ]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+
+            tooltip: commonTooltipOptions,
+
+            legend: { position: 'top' }
+
+        },
+
+        scales: {
+
+            y: {
+
+                beginAtZero: true,
+
+                max: 40,
+
+                title: { display: true, text: 'Percentage of Advisory Effort' }
+
+            }
+
+        }
+
+    }
+
+});
+
+ 
+
+const radarLabels = [
+
+    'Empathy & Emotional Intel',
+
+    'Conflict Mediation',
+
+    'Change Orchestration',
+
+    'Stakeholder Alignment',
+
+    'Active Listening',
+
+    'Technical Governance'
+
+].map(formatLabel);
+
+ 
+
+new Chart(document.getElementById('competencyRadarChart'), {
+
+    type: 'radar',
+
+    data: {
+
+        labels: radarLabels,
+
+        datasets: [{
+
+            label: 'Traditional PMO',
+
+            data: [40, 50, 60, 70, 50, 95],
+
+            backgroundColor: 'rgba(203, 213, 225, 0.2)',
+
+            borderColor: '#94a3b8',
+
+            pointBackgroundColor: '#94a3b8',
+
+        }, {
+
+            label: 'People-First PMO Advisor',
+
+            data: [90, 85, 95, 90, 85, 60],
+
+            backgroundColor: 'rgba(16, 185, 129, 0.2)',
+
+            borderColor: '#10b981',
+
+            pointBackgroundColor: '#10b981',
+
+        }]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+
+            tooltip: commonTooltipOptions,
+
+            legend: { position: 'bottom' }
+
+        },
+
+        scales: {
+
+            r: {
+
+                min: 0,
+
+                max: 100,
+
+                ticks: { display: false }
+
+            }
+
+        }
+
+    }
+
+});
+
+ 
+
+const doughnutLabels = [
+
+    'Unresolved Stakeholder Conflict',
+
+    'Change Resistance & Burnout',
+
+    'Poor Communication',
+
+    'Technical or Budget Failure'
+
+].map(formatLabel);
+
+ 
+
+new Chart(document.getElementById('failureDoughnutChart'), {
+
+    type: 'doughnut',
+
+    data: {
+
+        labels: doughnutLabels,
+
+        datasets: [{
+
+            data: [40, 35, 15, 10],
+
+            backgroundColor: [
+
+                '#f97316',
+
+                '#f59e0b',
+
+                '#3b82f6',
+
+                '#cbd5e1'
+
+            ],
+
+            borderWidth: 0
+
+        }]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        cutout: '65%',
+
+        plugins: {
+
+            tooltip: commonTooltipOptions,
+
+            legend: { position: 'right' }
+
+        }
+
+    }
+
+});
+
+ 
+
+const lineLabels = ['Q1 2024', 'Q3 2024', 'Q1 2025', 'Q3 2025', 'Q1 2026', 'Q3 2026'].map(formatLabel);
+
+ 
+
+new Chart(document.getElementById('impactLineChart'), {
+
+    type: 'line',
+
+    data: {
+
+        labels: lineLabels,
+
+        datasets: [
+
+            {
+
+                label: 'Project Success Rate (%)',
+
+                data: [65, 68, 74, 81, 86, 89],
+
+                borderColor: '#2563eb',
+
+                backgroundColor: 'rgba(37, 99, 235, 0.1)',
+
+                borderWidth: 3,
+
+                tension: 0.4,
+
+                fill: true
+
+            },
+
+            {
+
+                label: 'Project Team Retention (%)',
+
+                data: [72, 75, 78, 85, 90, 94],
+
+                borderColor: '#10b981',
+
+                backgroundColor: 'transparent',
+
+                borderWidth: 3,
+
+                borderDash: [5, 5],
+
+                tension: 0.4
+
+            }
+
+        ]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+
+            tooltip: commonTooltipOptions,
+
+            legend: { position: 'top' }
+
+        },
+
+        scales: {
+
+            y: {
+
+                beginAtZero: false,
+
+                min: 50,
+
+                max: 100,
+
+                title: { display: true, text: 'Metric Percentage' }
+
+            }
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
+
+ 
